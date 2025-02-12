@@ -15,9 +15,9 @@ pipeline {
             echo "Iteration: ${i}"
             sleep(1)
           }
-          mvn test
         }
 
+        bat 'mvn test'
       }
     }
 
