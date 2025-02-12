@@ -21,6 +21,13 @@ pipeline {
         
         stage('unit test'){
             steps {
+                script{
+                        for (int i = 1; i <= 5; i++) {
+                            
+                        echo "Iteration: ${i}"
+                            sleep(1)
+                    }
+                }
                 bat "mvn test"
             }
         }
